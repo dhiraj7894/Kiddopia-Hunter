@@ -11,7 +11,6 @@ public class UserProfileManager : Singleton<UserProfileManager>
     private void Start() {
     }
     public void SaveGameData(int score){
-        Debug.Log("Test");
         foreach (var item in UserData.Instance._userData)
         {
             if (item.name == _userName)

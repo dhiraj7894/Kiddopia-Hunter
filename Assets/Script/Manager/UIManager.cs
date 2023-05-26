@@ -9,6 +9,7 @@ public class UIManager : MonoBehaviour
 {
     [SerializeField] private List<Image> _healthImage = new List<Image>();
     [SerializeField] private TextMeshProUGUI _coinCountText;
+    [SerializeField] private TextMeshProUGUI _coinScore;
     [SerializeField] private Transform GameOverScreen;
     [SerializeField] private UserProfileManager USD;
     [SerializeField] private UserData UD;
@@ -41,6 +42,7 @@ public class UIManager : MonoBehaviour
     {
         if (_currentHealthCount <= 0 && !GameManager.Instance.isDead)
         {
+            _coinScore.text =  "Score : "+_coinCount.ToString();
             SetPlayerCointData();
 
         }
